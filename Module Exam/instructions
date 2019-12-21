@@ -1,0 +1,48 @@
+Data Structures Module Exam
+
+Your goal in this assignment is to simulate a whole bunch of lasers of different colors and have them fly across the screen.
+Each of the steps below are in the order of the commented sections main.js
+
+1. Canvas Setup
+    Setup your canvas to have a width of 1200 and a height of 700
+
+2. Global Vars
+    Create a variable to store your image element. The id of the image is 'spacebg'
+    Create 100 lasers beams using parallel arrays, a 2D array, or an array of laser objects.
+        - Each one starts on the left side of the screen.
+        - Each one is randomly positioned along the height of the canvas.
+        - The height of each laser is 5 and never changes.
+        - The width of each laser is a random value between 50 and 200.
+        - The speed of each laser is a random value between 10 and 30.
+        - The color of each laser is random (see below for details)
+
+3. Event Listeners
+    Create an event listener such that when the mouse is moving over the canvas (mousemove event), a function called 'mouseEventHandler' is run.
+    Create a keypress event listener.
+
+4. Canvas Drawing
+    Create your canvas drawing function. 
+    It should load the spacebg image that matches the canvas height and width.
+    It loops through the lasers array, properly animating the beams.
+    Once a beam is fully off the right side of the canvas, have it reappear from fully off the left side of the canvas.
+    New beams should have a new random height and a new random color and a new random width.
+
+5. getRandomColor
+    Follow the algorithm provided in main.js to get the random color working.
+    Use this function to randomly choose colors for your lasers.
+    If you cannot get this working, make all your lasers red.
+
+6. mouseEventHandler
+    This function reads the Y coordinate of the mouse and
+    Causes all lasers Y-values to match the mouse's Y value
+    Refer to Mouse & Keyboard Input on the site if you forgot how to read mouse coordinates
+    Use a 'mousemove' event in your event listener
+
+7. keypressHandler
+    When the 'q' key is pressed, all the lasers speeds increase by 1.
+    When the 'z' key is pressed, all the lasers speeds decrease by 1.
+
+8. myBonusFunction
+    For bonus marks, create your own function that does something neat with the lasers!
+
+    
